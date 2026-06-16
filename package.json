@@ -1,0 +1,32 @@
+{
+  "name": "blossom-her",
+  "version": "1.0.0",
+  "description": "Youth Sexual & Reproductive Health Information Platform for Zambia",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "python -m http.server 8000",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sexual-health",
+    "reproductive-health",
+    "HIV",
+    "Zambia",
+    "youth",
+    "adolescent",
+    "SRH"
+  ],
+  "author": "Phillip Design Star",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Phillip-design-star/blossom-her.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Phillip-design-star/blossom-her/issues"
+  },
+  "homepage": "https://github.com/Phillip-design-star/blossom-her#readme",
+  "devDependencies": {},
+  "dependencies": {}
+}

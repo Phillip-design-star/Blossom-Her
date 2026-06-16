@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blossom Her - Youth Sexual & Reproductive Health Information for Zambia">
+    <meta name="keywords" content="sexual health, reproductive health, HIV, Zambia, youth, adolescent">
+    <meta name="author" content="Blossom Her">
+    <meta property="og:title" content="Blossom Her — Youth Sexual & Reproductive Health">
+    <meta property="og:description" content="Trusted sexual and reproductive health information for Zambian adolescents">
+    <title>Blossom Her — Youth Sexual & Reproductive Health | Zambia</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon" aria-hidden="true">🌸</span>
+                <span>Blossom Her</span>
+            </div>
+            <ul class="nav-links">
+                <li><a onclick="showSection('home')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'home')">Home</a></li>
+                <li><a onclick="showSection('education')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'education')">Learn</a></li>
+                <li><a onclick="showSection('calculator')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'calculator')">HIV Risk Check</a></li>
+                <li><a onclick="showSection('clinics')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'clinics')">Find Clinic</a></li>
+                <li><a onclick="showSection('myths')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'myths')">Myth Buster</a></li>
+                <li><a onclick="showSection('faq')" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'faq')">Ask a Question</a></li>
+            </ul>
+            <div class="mobile-menu" onclick="toggleMobileMenu()" onkeypress="handleKeyPress(event)" aria-label="Toggle mobile menu" role="button" tabindex="0">☰</div>
+        </div>
+        <div id="mobileNav" class="mobile-nav" style="display: none;">
+            <a onclick="showSection('home'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'home')">Home</a>
+            <a onclick="showSection('education'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'education')">Learn</a>
+            <a onclick="showSection('calculator'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'calculator')">HIV Risk Check</a>
+            <a onclick="showSection('clinics'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'clinics')">Find Clinic</a>
+            <a onclick="showSection('myths'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'myths')">Myth Buster</a>
+            <a onclick="showSection('faq'); toggleMobileMenu()" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'faq')">Ask a Question</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div id="home" class="section active">
+        <div class="hero">
+            <h1>Your Health. Your Future. Your Choice.</h1>
+            <p>Trusted sexual and reproductive health information for Zambian adolescents. Based on data from the Zambia Demographic and Health Survey 2024.</p>
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <div class="stat-number">29%</div>
+                    <div class="stat-label">Adolescent girls pregnant by age 18</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">42%</div>
+                    <div class="stat-label">Young women with HIV prevention knowledge</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">83%</div>
+                    <div class="stat-label">Women ever tested for HIV</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">37%</div>
+                    <div class="stat-label">Rural adolescent pregnancy rate</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="padding: 3rem 1rem; max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">What Would You Like to Know?</h2>
+            <div class="card-grid">
+                <div class="card" onclick="showSection('education')" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'education')">
+                    <div class="card-icon" aria-hidden="true">📚</div>
+                    <h3>Puberty & Body Changes</h3>
+                    <p>Understand what's happening to your body during adolescence. Information for both girls and boys.</p>
+                </div>
+                <div class="card" onclick="showSection('calculator')" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'calculator')">
+                    <div class="card-icon" aria-hidden="true">🧮</div>
+                    <h3>HIV Risk Calculator</h3>
+                    <p>Check your risk level and get personalized recommendations for prevention and testing.</p>
+                </div>
+                <div class="card" onclick="showSection('clinics')" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'clinics')">
+                    <div class="card-icon" aria-hidden="true">🏥</div>
+                    <h3>Find a Youth-Friendly Clinic</h3>
+                    <p>Locate health facilities near you that offer confidential services for young people.</p>
+                </div>
+                <div class="card" onclick="showSection('myths')" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'myths')">
+                    <div class="card-icon" aria-hidden="true">🎯</div>
+                    <h3>Myth Buster Game</h3>
+                    <p>Test your knowledge! Can you spot the myths about HIV, contraception, and sexual health?</p>
+                </div>
+                <div class="card" onclick="showSection('faq')" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, 'faq')">
+                    <div class="card-icon" aria-hidden="true">💬</div>
+                    <h3>Ask Anonymous Questions</h3>
+                    <p>Get answers to embarrassing questions without judgment. 100% anonymous.</p>
+                </div>
+                <div class="card" onclick="showPeerEducator()" style="cursor: pointer;" role="button" tabindex="0" onkeypress="handleKeyPress(event, showPeerEducator)">
+                    <div class="card-icon" aria-hidden="true">👥</div>
+                    <h3>Talk to a Peer Educator</h3>
+                    <p>Chat with trained young people who understand what you're going through.</p>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; background: white; padding: 2rem; border-radius: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                <h3 style="color: var(--dark); margin-bottom: 1rem;">🇿🇲 Why This Matters in Zambia</h3>
+                <p>Zambia has one of the highest adolescent pregnancy rates in Africa. Nearly <strong>3 in 10 girls</strong> become pregnant before age 18, with rates as high as <strong>37% in rural areas</strong>. Early pregnancy often means dropping out of school, limiting future opportunities, and facing serious health risks.</p>
+                <p style="margin-top: 1rem;">Additionally, while <strong>83% of women</strong> have been tested for HIV, only <strong>42% of young women</strong> and <strong>43% of young men</strong> have comprehensive knowledge of HIV prevention. Knowledge is power — and this site is here to give you that power.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <div id="education" class="section">
+        <h2 class="section-title">Understanding Your Body</h2>
+        
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; max-width: 1000px; margin: 0 auto; padding: 0 1rem;">
+            <div class="card" style="border-left-color: #e91e63;">
+                <h3>🌸 For Girls</h3>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li><strong>Menstruation:</strong> A normal monthly cycle. Periods usually start between ages 10-15.</li>
+                    <li><strong>Breast development:</strong> Usually the first sign of puberty.</li>
+                    <li><strong>Hips widen:</strong> Your body prepares for potential future childbirth.</li>
+                    <li><strong>Mood changes:</strong> Hormones can make emotions feel stronger. This is normal!</li>
+                    <li><strong>Discharge:</strong> Clear or white discharge is normal. If it smells bad or itches, see a nurse.</li>
+                </ul>
+            </div>
+            <div class="card" style="border-left-color: #2196f3;">
+                <h3>🌿 For Boys</h3>
+                <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+                    <li><strong>Voice changes:</strong> Your voice may "crack" as it deepens.</li>
+                    <li><strong>Facial/body hair:</strong> Hair grows on face, chest, underarms, and pubic area.</li>
+                    <li><strong>Muscles develop:</strong> Shoulders broaden and muscles grow.</li>
+                    <li><strong>Wet dreams:</strong> Ejaculation during sleep is completely normal.</li>
+                    <li><strong>Erections:</strong> Happen often and sometimes at embarrassing times. Totally normal!</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="max-width: 1000px; margin: 2rem auto; padding: 0 1rem;">
+            <div class="card" style="border-left-color: var(--accent);">
+                <h3>🛡️ HIV Prevention — The ABCD Method</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem;" aria-hidden="true">🚫</div>
+                        <strong>A — Abstain</strong>
+                        <p style="font-size: 0.9rem;">The only 100% effective way to prevent HIV and pregnancy.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem;" aria-hidden="true">💑</div>
+                        <strong>B — Be Faithful</strong>
+                        <p style="font-size: 0.9rem;">If sexually active, stick to one uninfected partner.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem;" aria-hidden="true">🎈</div>
+                        <strong>C — Condomize</strong>
+                        <p style="font-size: 0.9rem;">Use condoms correctly, every single time.</p>
+                    </div>
+                    <div style="text-align: center; padding: 1rem;">
+                        <div style="font-size: 2rem;" aria-hidden="true">💊</div>
+                        <strong>D — Drugs (ARVs/PrEP)</strong>
+                        <p style="font-size: 0.9rem;">Take ARVs if HIV+ or PrEP if at high risk.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" style="margin-top: 1.5rem; border-left-color: var(--warning);">
+                <h3>⚠️ When to See a Health Worker</h3>
+                <ul style="margin-left: 1.5rem;">
+                    <li>Missed period (if sexually active) — check for pregnancy</li>
+                    <li>Burning pain when urinating — could be an STI</li>
+                    <li>Unusual discharge, sores, or warts around genitals</li>
+                    <li>Severe abdominal pain</li>
+                    <li>You think you may have been exposed to HIV — get tested immediately (PEP works within 72 hours)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- HIV Risk Calculator -->
+    <div id="calculator" class="section">
+        <h2 class="section-title">HIV Risk Check</h2>
+        <div class="calculator">
+            <p style="text-align: center; color: #666; margin-bottom: 1.5rem; font-size: 0.95rem;">✓ Answer honestly. This information stays only on your device. Your answers are not saved anywhere.</p>
+            
+            <form id="riskForm" onsubmit="calculateRisk(event)">
+                <div class="form-group">
+                    <label for="age">How old are you? <span class="required" aria-label="required">*</span></label>
+                    <select id="age" required aria-required="true">
+                        <option value="">Select your age...</option>
+                        <option value="low">Under 15</option>
+                        <option value="medium">15-19</option>
+                        <option value="high">20-24</option>
+                        <option value="medium">25+</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="residence">Do you live in an urban or rural area? <span class="required" aria-label="required">*</span></label>
+                    <select id="residence" required aria-required="true">
+                        <option value="">Select area type...</option>
+                        <option value="low">Urban</option>
+                        <option value="high">Rural</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="sexuallyActive">Have you ever had sex? <span class="required" aria-label="required">*</span></label>
+                    <select id="sexuallyActive" required aria-required="true" onchange="togglePartnerFields()">
+                        <option value="">Select an option...</option>
+                        <option value="low">No</option>
+                        <option value="high">Yes</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="partnersGroup" style="display:none;">
+                    <label for="partners">In the past 12 months, how many sexual partners have you had?</label>
+                    <select id="partners">
+                        <option value="low">0</option>
+                        <option value="medium">1 (steady partner)</option>
+                        <option value="high">2 or more</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="condomGroup" style="display:none;">
+                    <label for="condomUse">Do you always use condoms?</label>
+                    <select id="condomUse">
+                        <option value="low">Yes, always</option>
+                        <option value="high">Sometimes</option>
+                        <option value="high">Never</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="tested">Have you ever been tested for HIV? <span class="required" aria-label="required">*</span></label>
+                    <select id="tested" required aria-required="true">
+                        <option value="">Select an option...</option>
+                        <option value="low">Yes, within last 3 months</option>
+                        <option value="medium">Yes, but over 3 months ago</option>
+                        <option value="high">No, never tested</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="statusKnown">Do you know your current HIV status? <span class="required" aria-label="required">*</span></label>
+                    <select id="statusKnown" required aria-required="true">
+                        <option value="">Select an option...</option>
+                        <option value="low">Yes, I'm negative</option>
+                        <option value="low">Yes, I'm positive and on ARVs</option>
+                        <option value="high">No, I don't know</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn">Check My Risk</button>
+            </form>
+
+            <div id="riskResult" class="result-box" role="alert" aria-live="polite" style="display: none;">
+                <h3 id="riskTitle"></h3>
+                <p id="riskText"></p>
+                <div id="riskActions" style="margin-top: 1rem;"></div>
+            </div>
+        </div>
+
+        <div style="max-width: 700px; margin: 2rem auto; background: #e3f2fd; padding: 1.5rem; border-radius: 15px; border-left: 5px solid #2196f3;">
+            <strong>💡 Did you know?</strong> In Zambia, only <strong>42% of young women</strong> and <strong>43% of young men</strong> have comprehensive knowledge of HIV prevention. Knowing your status and using protection can keep you safe.
+        </div>
+    </div>
+
+    <!-- Clinic Finder -->
+    <div id="clinics" class="section">
+        <h2 class="section-title">Find a Youth-Friendly Clinic</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem;">You have the right to confidential health services. These clinics offer non-judgmental care.</p>
+        
+        <div style="max-width: 600px; margin: 0 auto 2rem; padding: 0 1rem;">
+            <label for="provinceSelect" style="display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--dark);">Filter by Province:</label>
+            <select id="provinceSelect" onchange="filterClinics()" aria-label="Filter clinics by province" style="width: 100%; padding: 1rem; border-radius: 10px; border: 2px solid #e0e0e0; font-size: 1rem;">
+                <option value="all">All Provinces</option>
+                <option value="lusaka">Lusaka Province</option>
+                <option value="copperbelt">Copperbelt Province</option>
+                <option value="southern">Southern Province</option>
+                <option value="eastern">Eastern Province</option>
+                <option value="central">Central Province</option>
+                <option value="northern">Northern Province</option>
+                <option value="northwestern">Northwestern Province</option>
+                <option value="western">Western Province</option>
+            </select>
+        </div>
+
+        <div class="clinic-list" id="clinicList">
+            <!-- Populated by JavaScript -->
+        </div>
+
+        <div id="noClinicMessage" style="text-align: center; padding: 2rem; color: #666; display: none;">
+            <p>No clinics found in the selected province. Try another province or contact your nearest health facility.</p>
+        </div>
+    </div>
+
+    <!-- Myth Buster Game -->
+    <div id="myths" class="section">
+        <h2 class="section-title">Myth Buster Game</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Test your knowledge about HIV, contraception, and sexual health. Can you spot the myths? Your score is tracked on this device only.</p>
+
+        <div class="myth-card">
+            <div class="myth-statement" id="mythStatement" role="status" aria-live="polite"></div>
+            <div class="myth-buttons">
+                <button class="myth-btn" onclick="answerMyth(true)" aria-label="Answer TRUE">TRUE ✓</button>
+                <button class="myth-btn" onclick="answerMyth(false)" aria-label="Answer FALSE">FALSE ✗</button>
+            </div>
+            <div class="score-display" id="scoreDisplay" aria-live="polite">Score: 0/0</div>
+        </div>
+
+        <div style="max-width: 600px; margin: 2rem auto; padding: 0 1rem;">
+            <button class="btn" onclick="resetMythGame()" style="background: #666;">Start Over</button>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div id="faq" class="section">
+        <h2 class="section-title">Ask a Question (Anonymous)</h2>
+        <p style="text-align: center; color: #666; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;">Have a question you're shy to ask? We've answered common ones below. You can also submit your own anonymous question.</p>
+
+        <div style="max-width: 800px; margin: 0 auto; padding: 0 1rem;">
+            <div style="background: white; padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: var(--dark); margin-bottom: 1rem;">Submit Your Anonymous Question</h3>
+                <form id="questionForm" onsubmit="submitQuestion(event)">
+                    <div class="form-group">
+                        <label for="questionText">Your Question <span class="required" aria-label="required">*</span></label>
+                        <textarea id="questionText" placeholder="Ask anything... your question is 100% anonymous" required aria-required="true" style="width: 100%; padding: 1rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem; font-family: inherit; min-height: 100px; resize: vertical;"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="questionCategory">Category (optional)</label>
+                        <select id="questionCategory" style="width: 100%; padding: 0.8rem; border: 2px solid #e0e0e0; border-radius: 10px; font-size: 1rem;">
+                            <option value="general">General Health</option>
+                            <option value="hiv">HIV & Testing</option>
+                            <option value="pregnancy">Pregnancy & Contraception</option>
+                            <option value="sti">STIs & Infections</option>
+                            <option value="relationships">Relationships & Consent</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn">Submit Question</button>
+                </form>
+                <div id="questionSuccess" style="display: none; background: #e8f5e9; color: #2e7d32; padding: 1rem; border-radius: 10px; margin-top: 1rem;" role="alert">
+                    ✓ Thank you! Your question has been submitted. Our health experts will answer it soon.
+                </div>
+            </div>
+
+            <h3 style="color: var(--dark); margin-bottom: 1.5rem; margin-top: 2rem;">Frequently Asked Questions</h3>
+            <div id="faqContainer"></div>
+        </div>
+    </div>
+
+    <!-- Peer Educator Modal -->
+    <div id="peerEducatorModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closePeerEducator()" aria-label="Close modal">&times;</span>
+            <h2>Talk to a Peer Educator</h2>
+            <p>Our trained peer educators are here to answer your questions confidentially. Click below to connect via WhatsApp:</p>
+            <div style="margin: 2rem 0; text-align: center;">
+                <a href="https://wa.me/260971234567?text=Hi,%20I%20have%20a%20question%20about%20sexual%20health" target="_blank" rel="noopener noreferrer" class="btn" style="display: inline-block; text-decoration: none;">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
+            <p style="font-size: 0.9rem; color: #666; margin-top: 1rem;">Available Monday-Friday, 9am-5pm Zambia Time</p>
+        </div>
+    </div>
+
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <div>
+            <strong>🚨 Need Help?</strong> Sexual Abuse/Assault: <a href="tel:+260211252040">Call 211 (toll-free)</a> | HIV Emergency (PEP): <a href="tel:+260211252040">Visit any clinic within 72 hours</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
